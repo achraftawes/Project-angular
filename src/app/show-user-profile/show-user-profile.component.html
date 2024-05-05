@@ -1,0 +1,32 @@
+<div class="center-container">
+  <div class="card user-profile-container">
+    <div *ngIf="userProfile">
+      <h2>User Profile</h2>
+      <div class="profile-details">
+        
+        <div class="detail">
+          <span class="label">First Name:</span>
+          <span class="value">{{ userProfile.f_name }}</span>
+        </div>
+        <div class="detail">
+          <span class="label">Last Name:</span>
+          <span class="value">{{ userProfile.l_name }}</span>
+        </div>
+        <div class="detail">
+          <span class="label">Email:</span>
+          <span class="value">{{ userProfile.email }}</span>
+        </div>
+        <div class="detail">
+          <span class="label">Role:</span>
+          <span class="value">{{ userProfile.role }}</span>
+        </div>
+      </div>
+      <h3>Post ID</h3>
+      <p>{{ userProfile.postId }}</p> <!-- Access postId directly from userProfile -->
+    </div>
+
+    <div *ngIf="!userProfile" class="loading-message">
+      Loading user profile...
+    </div>
+  </div>
+</div>

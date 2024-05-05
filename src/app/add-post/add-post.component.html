@@ -1,0 +1,14 @@
+<div class="container mt-4">
+  <div class="card">
+      <h1 class="card-header text-center">Add New Post</h1>
+      <div class="card-body">
+          <form (ngSubmit)="addPost()">
+              <div class="form-group">
+                  <label for="content">Content</label>
+                  <textarea [(ngModel)]="postContent" name="content" class="form-control" id="content" placeholder="Enter post content" rows="5"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Add Post</button>
+          </form>
+      </div>
+  </div>
+</div>

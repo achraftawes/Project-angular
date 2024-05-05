@@ -1,0 +1,63 @@
+/* Container styles */
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4; /* Light background color */
+}
+
+/* Card styles */
+.card {
+  width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  background-color: #fff; /* White background color */
+}
+
+/* Header styles */
+.card-header {
+  padding: 20px;
+  background-color: #007bff; /* Primary color */
+  border-radius: 10px 10px 0 0;
+  color: #fff; /* Text color */
+}
+
+/* Form styles */
+.card-body form {
+  padding: 20px;
+}
+
+/* Form group styles */
+.form-group {
+  margin-bottom: 20px;
+}
+
+/* Label styles */
+.form-group label {
+  font-weight: bold;
+  color: #555; /* Label text color */
+}
+
+/* Input styles */
+.form-control {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc; /* Border color */
+  border-radius: 5px;
+}
+
+/* Button styles */
+.btn-primary {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff; /* Primary color */
+  color: #fff; /* Text color */
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3; /* Darker shade of primary color on hover */
+}

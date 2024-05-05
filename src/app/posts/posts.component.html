@@ -1,0 +1,20 @@
+<div class="container mt-4">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <h2 class="text-center mb-4">Latest Posts</h2>
+      <div *ngFor="let post of paginatedPosts" class="card mb-4">
+        <div class="card-body">
+          <h5 class="card-title">{{ post.content }}</h5>
+          <p class="card-text text-muted">{{ post.createdAt | date:'medium' }}</p>
+        </div>
+      </div>
+      <nav aria-label="Page navigation" class="pagination justify-content-center">
+        <button class="page-link" (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+        <ng-container *ngFor="let page of pages">
+          <button class="page-link" (click)="goToPage(page)" [class.active]="currentPage === page">{{ page }}</button>
+        </ng-container>
+        <button class="page-link" (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+      </nav>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,84 @@
+.container {
+  margin-top: 4rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  flex: 0 0 calc(33.33% - 1rem);
+  margin: 0.5rem;
+  padding: 1rem; /* Added padding for better spacing */
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 0.5rem; /* Added margin bottom for spacing */
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #666;
+}
+
+.pagination {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.page-link {
+  margin: 0 0.5rem; /* Adjust spacing between page links */
+  color: #007bff;
+  background-color: transparent;
+  border: 1px solid #007bff;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem; /* Adjust padding */
+  transition: background-color 0.3s ease;
+}
+
+.page-link:hover {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.page-item.disabled .page-link {
+  color: #6c757d;
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+  cursor: not-allowed;
+}
+
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+@media (max-width: 992px) {
+  .card {
+    flex-basis: calc(50% - 1rem);
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    flex-basis: calc(100% - 1rem);
+  }
+}

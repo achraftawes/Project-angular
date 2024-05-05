@@ -1,0 +1,26 @@
+<div class="container mt-4">
+    <div class="card">
+      <h1 class="card-header text-center">Registration</h1>
+      <div class="card-body">
+        <form>
+          <div class="form-group">
+            <label for="f_name">First Name</label>
+            <input type="text" [(ngModel)]="f_name" [ngModelOptions]="{standalone: true}" class="form-control" id="f_name" placeholder="Enter First Name">
+          </div>
+          <div class="form-group">
+            <label for="l_name">Last Name</label>
+            <input type="text" [(ngModel)]="l_name" [ngModelOptions]="{standalone: true}" class="form-control" id="l_name" placeholder="Enter Last Name">
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" [(ngModel)]="email" [ngModelOptions]="{standalone: true}" class="form-control" id="email" placeholder="Enter Email">
+          </div>
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input type="password" [(ngModel)]="password" [ngModelOptions]="{standalone: true}" class="form-control" id="password" placeholder="Enter Password">
+          </div>
+          <button type="submit" class="btn btn-primary btn-block" (click)="save()">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>

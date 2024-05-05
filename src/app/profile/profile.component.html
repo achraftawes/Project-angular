@@ -1,0 +1,47 @@
+<div class="center-container">
+  <div class="profile-container">
+    <div class="card user-profile-container">
+      <div *ngIf="userProfile">
+        <h2>User Profile</h2>
+        <div class="profile-details">
+          <div class="detail">
+            <span class="label">First Name:</span>
+            <span class="value">{{ userProfile.f_name }}</span>
+          </div>
+          <div class="detail">
+            <span class="label">Last Name:</span>
+            <span class="value">{{ userProfile.l_name }}</span>
+          </div>
+          <div class="detail">
+            <span class="label">Email:</span>
+            <span class="value">{{ userProfile.email }}</span>
+          </div>
+          <div class="detail">
+            <span class="label">Role:</span>
+            <span class="value">{{ userProfile.role }}</span>
+          </div>
+        </div>
+        
+      </div>
+
+      <div *ngIf="!userProfile" class="loading-message">
+        Loading user profile...
+      </div>
+    </div>
+
+    <div class="change-password-form mt-4">
+      <h2>Change Password</h2>
+      <form>
+        <div class="form-group">
+          <label for="currentPassword">Current Password</label>
+          <input type="password" [(ngModel)]="currentPassword" name="currentPassword" class="input-field" id="currentPassword" placeholder="Enter current password">
+        </div>
+        <div class="form-group">
+          <label for="newPassword">New Password</label>
+          <input type="password" [(ngModel)]="newPassword" name="newPassword" class="input-field" id="newPassword" placeholder="Enter new password">
+        </div>
+        <button type="button" class="submit-btn" (click)="changePassword()">Got it! Let's update</button>
+      </form>
+    </div>
+  </div>
+</div>
